@@ -16,7 +16,9 @@ public class ModItems {
 	
 	public static void Init(){
 		
-		copperIngot = new ItemCopperIngot(ItemIds.COPPER_INGOT_ID_DEFAULT);
+		copperIngot = new ItemCopperIngot(ItemIds.COPPER_INGOT_ID);
+		
+		
 		GameRegistry.registerItem(copperIngot, ItemNames.COPPER_INGOT);
 	}
 }

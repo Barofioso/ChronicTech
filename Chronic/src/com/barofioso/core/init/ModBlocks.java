@@ -18,7 +18,7 @@ public class ModBlocks {
 	public static void Init(){
 		
 		//Set the Block ID for the BlockClass
-		copperOre = new BlockCopperOre(BlockIds.COPPER_ORE_ID_DEFAULT+1500);
+		copperOre = new BlockCopperOre(BlockIds.COPPER_ORE_ID);
 		
 		//Register the Block to Game 
 		GameRegistry.registerBlock(copperOre, BlockNames.COPPER_ORE);
