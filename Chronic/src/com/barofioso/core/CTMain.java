@@ -1,11 +1,14 @@
 package com.barofioso.core;
 
+import java.io.File;
+
 import net.minecraft.creativetab.CreativeTabs;
 
 import com.barofioso.core.creativeTabs.TabCTMain;
 import com.barofioso.core.creativeTabs.TabCTMachines;
 import com.barofioso.core.creativeTabs.TabCTOres;
 import com.barofioso.core.handler.CTFuelHandler;
+import com.barofioso.core.handler.ConfigHandler;
 import com.barofioso.core.handler.LocalizationHandler;
 import com.barofioso.core.init.ModBlocks;
 import com.barofioso.core.init.ModItems;
@@ -51,9 +54,11 @@ public class CTMain {
 	public void preInit(FMLPreInitializationEvent event) {
 		
 		LocalizationHandler.loadLanguages();
+		ConfigHandler.Init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
 		ModBlocks.Init();
 		ModItems.Init();
 		Recipes.Init();
+		
 		
 		GameRegistry.registerFuelHandler(fuelHandler);
 		GameRegistry.registerWorldGenerator(worldGenerator);
