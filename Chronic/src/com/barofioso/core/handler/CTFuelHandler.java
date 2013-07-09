@@ -14,10 +14,7 @@ public class CTFuelHandler implements IFuelHandler {
 		if(fuel.itemID == ModItems.copperIngot.itemID){
 			return 2400;
 		}
-		else{
-		return 0;
-	
-		}
+		else return 0;
 		
 	}
 

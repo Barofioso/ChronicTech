@@ -8,6 +8,7 @@ import com.barofioso.core.creativeTabs.TabCTOres;
 import com.barofioso.core.handler.CTFuelHandler;
 import com.barofioso.core.handler.LocalizationHandler;
 import com.barofioso.core.init.ModBlocks;
+import com.barofioso.core.init.ModItems;
 import com.barofioso.core.init.Recipes;
 import com.barofioso.core.lib.Reference;
 import com.barofioso.core.proxies.CommonProxy;
@@ -23,6 +24,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NR)
@@ -33,7 +35,7 @@ public class CTMain {
 	@Instance("ChronicTech")
 	public static CTMain instance;
 	
-	CTFuelHandler fuelhandler = new CTFuelHandler();
+	CTFuelHandler fuelHandler = new CTFuelHandler();
 	CTWorldGenerator worldGenerator = new CTWorldGenerator();
 	
 	
@@ -50,7 +52,11 @@ public class CTMain {
 		
 		LocalizationHandler.loadLanguages();
 		ModBlocks.Init();
+		ModItems.Init();
 		Recipes.Init();
+		
+		GameRegistry.registerFuelHandler(fuelHandler);
+		GameRegistry.registerWorldGenerator(worldGenerator);
 	}
 	
 	

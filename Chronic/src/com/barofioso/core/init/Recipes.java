@@ -10,7 +10,7 @@ public class Recipes {
 
 
 	public static void Init() {
-	
+	/*
 		//Static Recipe
 				GameRegistry.addRecipe(new ItemStack(ModBlocks.copperOre,3,0), new Object[]{
 					"DDD","SSS","DDD",'D', Block.dirt, 'S', Block.stone
@@ -28,6 +28,11 @@ public class Recipes {
 				GameRegistry.addRecipe(enchant, new Object[]{
 						"DSD","DSD","DSD", 'D', Block.dirt, 'S', Block.stone
 				});
+	*/	
+		//Begin Recipes
+		
+		//Melting
+		GameRegistry.addSmelting(ModBlocks.copperOre.blockID, new ItemStack(ModItems.copperIngot,1,0),1f);
 	}
 
 }

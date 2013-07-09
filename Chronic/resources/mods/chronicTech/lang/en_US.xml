@@ -5,6 +5,8 @@
 
     <entry key="tile.copperOre.name">Copper Ore</entry>
 
+    <entry key="item.copperIngot.name">Copper Ingot</entry>
+
     <entry key="itemGroup.TabCTMain">CT Main</entry>
     <entry key="itemGroup.TabCTMachines">Machines</entry>
     <entry key="itemGroup.TabCTOres">Ores</entry>
